@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fb92c192afa68b2489f6740a4c92b53f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 260181
+  packageName: Customizable Road Shader
+  packageVersion: 1.0
+  assetPath: Assets/Road/BRP/Road.shadergraph
+  uploadId: 599297

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ba7adce0955ba9047b407c0d6b28fdd1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209444
+  packageName: 'PROMETEO: Car Controller'
+  packageVersion: 1.2.2
+  assetPath: Assets/PROMETEO - Car Controller/Prefabs/Button Template.prefab
+  uploadId: 513063

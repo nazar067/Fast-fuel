@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9f7db1390ef20c14d9b616745d4ba850
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209444
+  packageName: 'PROMETEO: Car Controller'
+  packageVersion: 1.2.2
+  assetPath: Assets/PROMETEO - Car Controller/Fonts/Licence.txt
+  uploadId: 513063

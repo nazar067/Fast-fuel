@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: eda16a574f5cf654b832867016f588f6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Teko
+  fontNames:
+  - Teko
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209444
+  packageName: 'PROMETEO: Car Controller'
+  packageVersion: 1.2.2
+  assetPath: Assets/PROMETEO - Car Controller/Fonts/Teko-Bold.ttf
+  uploadId: 513063

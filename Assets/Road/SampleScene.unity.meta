@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8cb8fe4e62ed41e4fba8112ff7f05eda
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 260181
+  packageName: Customizable Road Shader
+  packageVersion: 1.0
+  assetPath: Assets/Road/SampleScene.unity
+  uploadId: 599297

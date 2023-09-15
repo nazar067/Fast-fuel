@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b36e29e623ce9b5468984c4324503438
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 13400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209444
+  packageName: 'PROMETEO: Car Controller'
+  packageVersion: 1.2.2
+  assetPath: Assets/PROMETEO - Car Controller/Materials/Walls.physicMaterial
+  uploadId: 513063

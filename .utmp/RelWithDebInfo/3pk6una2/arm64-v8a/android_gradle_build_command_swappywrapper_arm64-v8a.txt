@@ -1,0 +1,7 @@
+Executable : C:\Users\gamer\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe
+arguments : 
+-C
+C:\Users\gamer\Documents\Fast fuel\.utmp\RelWithDebInfo\3pk6una2\arm64-v8a
+swappywrapper
+jvmArgs : 
+

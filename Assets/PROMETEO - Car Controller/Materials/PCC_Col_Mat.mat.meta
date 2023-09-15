@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2d997c6d92b71154e8dee74617594aea
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209444
+  packageName: 'PROMETEO: Car Controller'
+  packageVersion: 1.2.2
+  assetPath: Assets/PROMETEO - Car Controller/Materials/PCC_Col_Mat.mat
+  uploadId: 513063

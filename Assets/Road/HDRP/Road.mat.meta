@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fb95be4cb8c3cbe41b23441c7d716686
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 260181
+  packageName: Customizable Road Shader
+  packageVersion: 1.0
+  assetPath: Assets/Road/HDRP/Road.mat
+  uploadId: 599297

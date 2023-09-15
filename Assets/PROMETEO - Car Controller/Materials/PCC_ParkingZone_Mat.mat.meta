@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c7e85d89b2e5e34a93e7f83facefcaa
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209444
+  packageName: 'PROMETEO: Car Controller'
+  packageVersion: 1.2.2
+  assetPath: Assets/PROMETEO - Car Controller/Materials/PCC_ParkingZone_Mat.mat
+  uploadId: 513063

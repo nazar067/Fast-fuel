@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab4ea67cd9337c341af0bd7182c60f92
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209444
+  packageName: 'PROMETEO: Car Controller'
+  packageVersion: 1.2.2
+  assetPath: Assets/PROMETEO - Car Controller/Effects/Trails/Prefabs/TireSkid.prefab
+  uploadId: 513063
