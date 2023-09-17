@@ -7,9 +7,16 @@ using UnityEngine.UI;
 public class StartGame : MonoBehaviour
 {
     public Button startButton;
+
     public GameObject gameCanvas;
     public GameObject menuCanvas;
+    public GameObject car;
+
+    public Camera mainCamera;
+    public Camera menuCamera;
+
     public bool changeScaleOnPressed = true;
+
     [HideInInspector]
     public bool buttonPressed = false;
     RectTransform rectTransform;
@@ -25,8 +32,11 @@ public class StartGame : MonoBehaviour
 
     private void GameStart()
     {
+        mainCamera.gameObject.SetActive(true);       
         menuCanvas.SetActive(false);
         gameCanvas.SetActive(true);
+        menuCamera.gameObject.SetActive(false);
+        car.GetComponent<Animator>().enabled = false;
         PrometeoCarController.instance.carEngineSound.mute = false;
     }
     public void ButtonDown()

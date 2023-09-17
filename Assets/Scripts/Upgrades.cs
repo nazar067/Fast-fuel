@@ -12,6 +12,14 @@ public class Upgrades : MonoBehaviour
     public float fuelDepletionRate = 10f;
 
     public Text fuelRate;
+    public Text maxSpeedText;
+/*    public Text maxReverseSpeedText;
+    public Text accelerationMultiplierText;
+    public Text maxSteeringAngleText;
+    public Text steeringSpeedText;
+    public Text brakeForceText;
+    public Text decelerationMultiplierText;
+    public Text handbrakeDriftMultiplierText;*/
 
     private void Start()
     {
@@ -31,7 +39,7 @@ public class Upgrades : MonoBehaviour
     }
     public void UpgradeFuel()
     {
-        if (fuelDepletionRate >= 2f) { 
+        if (fuelDepletionRate >= 2f && Money.Instance.money >= 10) { 
             fuelDepletionRate -= 1f;
             Money.Instance.MinusMoney(10);
             PlayerPrefs.SetInt("fuelRate", Convert.ToInt32(fuelDepletionRate));
@@ -49,6 +57,16 @@ public class Upgrades : MonoBehaviour
         if (fuelRate != null)
         {
             fuelRate.text = "Fuel rate: " + fuelDepletionRate.ToString("F0");
+        }
+    }
+    public void UpgradeCarText(string detail)
+    {
+        switch(detail)
+        {
+            case "maxSpeed":
+                maxSpeedText.text = "Max speed rate: " + PrometeoCarController.instance.maxSpeed
+                    .ToString("F0");
+                break;
         }
     }
 }

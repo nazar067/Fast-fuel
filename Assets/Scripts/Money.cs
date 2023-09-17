@@ -11,7 +11,7 @@ public class Money : MonoBehaviour
     public Text moneyText;
     public Text moneyTextShop;
 
-    private int money = 0;
+    public int money = 0;
     private void Start()
     {
         UpdateMoneyText();
@@ -38,7 +38,7 @@ public class Money : MonoBehaviour
     }
     public void MinusMoney(int amount)
     {
-        if(money > 0 && Upgrades.Instance.fuelDepletionRate > 2)
+        if(money >= amount)
         {
             money -= amount;
             UpdateMoneyText();

@@ -27,7 +27,7 @@ public class PrometeoCarController : MonoBehaviour
         {
             Destroy(gameObject); // Если уже существует другой экземпляр, уничтожаем этот.
         }
-
+        maxSpeed = PlayerPrefs.GetInt("maxSpeed", 20);
         // Другие инициализации и настройки...
     }
     //CAR SETUP
@@ -57,17 +57,114 @@ public class PrometeoCarController : MonoBehaviour
                                     // in the points x = 0 and z = 0 of your car. You can select the value that you want in the y axis,
                                     // however, you must notice that the higher this value is, the more unstable the car becomes.
                                     // Usually the y value goes from 0 to 1.5.
-
+    
+    public void UpgradesCar(string detail)
+    {
+        switch (detail)
+        {
+            case "maxSpeed":
+                if (maxSpeed < 190 && Money.Instance.money >= 10)
+                {
+                    maxSpeed += 10;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetInt("maxSpeed", maxSpeed);
+                    Upgrades.Instance.UpgradeCarText(detail);
+                }
+                else if(maxSpeed > 190)
+                {
+                    maxSpeed = 190;
+                    PlayerPrefs.SetInt("maxSpeed", maxSpeed);
+                }
+                break;
+            case "maxReverseSpeed":
+                if (maxReverseSpeed < 120)
+                {
+                    maxReverseSpeed += 10;
+                }
+                else if (maxReverseSpeed > 120)
+                {
+                    maxReverseSpeed = 120;
+                }
+                break;
+            case "accelerationSpeed":
+                if (accelerationMultiplier < 10)
+                {
+                    accelerationMultiplier += 1;
+                }
+                else if (accelerationMultiplier > 10)
+                {
+                    accelerationMultiplier = 10;
+                }
+                break;
+            case "maxSteeringAngle":
+                if (maxSteeringAngle < 45)
+                {
+                    maxSteeringAngle += 5;
+                }
+                else if (maxSteeringAngle > 45)
+                {
+                    maxSteeringAngle = 45;
+                }
+                break;
+            case "steeringSpeed":
+                if (steeringSpeed < 1)
+                {
+                    steeringSpeed += 0.1f;
+                }
+                else if (steeringSpeed > 1)
+                {
+                    steeringSpeed = 1;
+                }
+                break;
+            case "brakeForce":
+                if (brakeForce < 600)
+                {
+                    brakeForce += 100;
+                }
+                else if (brakeForce > 600)
+                {
+                    brakeForce = 600;
+                }
+                break;
+            case "deceleration":
+                if (decelerationMultiplier < 10)
+                {
+                    decelerationMultiplier += 1;
+                }
+                else if (decelerationMultiplier > 10)
+                {
+                    decelerationMultiplier = 10;
+                }
+                break;
+            case "drift":
+                if (handbrakeDriftMultiplier < 10)
+                {
+                    handbrakeDriftMultiplier += 1;
+                }
+                else if (handbrakeDriftMultiplier > 10)
+                {
+                    handbrakeDriftMultiplier = 10;
+                }
+                break;
+        }   
+    }
+    private void UpdateText()
+    {
+/*        if (fuelRate != null)
+        {
+            fuelRate.text = "Fuel rate: " + fuelDepletionRate.ToString("F0");
+        }*/
+    }
     //WHEELS
 
-      //[Header("WHEELS")]
+    //[Header("WHEELS")]
 
-      /*
-      The following variables are used to store the wheels' data of the car. We need both the mesh-only game objects and wheel
-      collider components of the wheels. The wheel collider components and 3D meshes of the wheels cannot come from the same
-      game object; they must be separate game objects.
-      */
-      public GameObject frontLeftMesh;
+    /*
+    The following variables are used to store the wheels' data of the car. We need both the mesh-only game objects and wheel
+    collider components of the wheels. The wheel collider components and 3D meshes of the wheels cannot come from the same
+    game object; they must be separate game objects.
+    */
+    public GameObject frontLeftMesh;
       public WheelCollider frontLeftCollider;
       [Space(10)]
       public GameObject frontRightMesh;
@@ -173,9 +270,9 @@ public class PrometeoCarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //In this part, we set the 'carRigidbody' value with the Rigidbody attached to this
-      //gameObject. Also, we define the center of mass of the car with the Vector3 given
-      //in the inspector.
+        //In this part, we set the 'carRigidbody' value with the Rigidbody attached to this
+        //gameObject. Also, we define the center of mass of the car with the Vector3 given
+        //in the inspector.
       carRigidbody = gameObject.GetComponent<Rigidbody>();
       carRigidbody.centerOfMass = bodyMassCenter;
 

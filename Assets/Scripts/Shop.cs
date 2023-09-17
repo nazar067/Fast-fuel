@@ -9,6 +9,14 @@ public class Shop : MonoBehaviour
     public Button openShopButton;
     public Button closeShopButton;
     public Button upgradeFuelButton;
+    public Button upgradeMaxSpeedButton;
+/*    public Button upgradeMaxReverseSpeedButton;
+    public Button upgradeAccelerationSpeedButton; //ускорение
+    public Button upgradeMaxSteeringAngleButton; //угол поворота
+    public Button upgradeSteeringSpeedButton; // скорость поворота
+    public Button upgradeBrakeForceButton; // ручной тормоз
+    public Button upgradeDecelerationButton; // тормоз
+    public Button upgradeDriftButton; */
     public GameObject shopCanvas;
     public GameObject menuCanvas;
     void Start()
@@ -16,6 +24,7 @@ public class Shop : MonoBehaviour
         openShopButton.onClick.AddListener(OpenShop);
         closeShopButton.onClick.AddListener(CloseShop);
         upgradeFuelButton.onClick.AddListener(UpgradeFuel);
+        upgradeMaxSpeedButton.onClick.AddListener(delegate { UpgradeCar("maxSpeed"); });
     }
     private void OpenShop()
     {
@@ -29,5 +38,9 @@ public class Shop : MonoBehaviour
     private void UpgradeFuel()
     {
         Upgrades.Instance.UpgradeFuel();
-    } 
+    }
+    private void UpgradeCar(string detail)
+    {
+        PrometeoCarController.instance.UpgradesCar(detail);
+    }
 }
