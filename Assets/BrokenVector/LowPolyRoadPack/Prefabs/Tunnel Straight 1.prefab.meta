@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e5fe1e0ae98e92240a79ae5a288119ad
+labels:
+- street
+- road
+- freeway
+- low-poly
+- lowpoly
+- tunnel
+timeCreated: 1468486764
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67288
+  packageName: Low Poly Road Pack
+  packageVersion: 1.3
+  assetPath: Assets/BrokenVector/LowPolyRoadPack/Prefabs/Tunnel Straight 1.prefab
+  uploadId: 253916

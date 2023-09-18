@@ -15,6 +15,8 @@ public class Money : MonoBehaviour
     private void Start()
     {
         UpdateMoneyText();
+        money = 200;
+        PlayerPrefs.SetInt("Money", money); 
     }
 
     private void Awake()

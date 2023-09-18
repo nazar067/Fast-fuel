@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 409109bbaa58cf340b5fea204e6aac85
+labels:
+- street
+- road
+- freeway
+- low-poly
+- lowpoly
+timeCreated: 1468486758
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67288
+  packageName: Low Poly Road Pack
+  packageVersion: 1.3
+  assetPath: Assets/BrokenVector/LowPolyRoadPack/Prefabs/Freeway Join Freeway 2.prefab
+  uploadId: 253916

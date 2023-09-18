@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: baf7bb04094c1fe4d994d728999eae1b
+labels:
+- street
+- road
+- freeway
+- low-poly
+- lowpoly
+- parkinglot
+timeCreated: 1468486761
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67288
+  packageName: Low Poly Road Pack
+  packageVersion: 1.3
+  assetPath: Assets/BrokenVector/LowPolyRoadPack/Prefabs/Parkinglot Center 3.prefab
+  uploadId: 253916

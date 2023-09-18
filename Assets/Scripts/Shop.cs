@@ -10,13 +10,13 @@ public class Shop : MonoBehaviour
     public Button closeShopButton;
     public Button upgradeFuelButton;
     public Button upgradeMaxSpeedButton;
-/*    public Button upgradeMaxReverseSpeedButton;
+    public Button upgradeMaxReverseSpeedButton;
     public Button upgradeAccelerationSpeedButton; //ускорение
     public Button upgradeMaxSteeringAngleButton; //угол поворота
     public Button upgradeSteeringSpeedButton; // скорость поворота
     public Button upgradeBrakeForceButton; // ручной тормоз
     public Button upgradeDecelerationButton; // тормоз
-    public Button upgradeDriftButton; */
+    public Button upgradeDriftButton;
     public GameObject shopCanvas;
     public GameObject menuCanvas;
     void Start()
@@ -25,6 +25,13 @@ public class Shop : MonoBehaviour
         closeShopButton.onClick.AddListener(CloseShop);
         upgradeFuelButton.onClick.AddListener(UpgradeFuel);
         upgradeMaxSpeedButton.onClick.AddListener(delegate { UpgradeCar("maxSpeed"); });
+        upgradeMaxReverseSpeedButton.onClick.AddListener(delegate { UpgradeCar("maxReverseSpeed"); });
+        upgradeAccelerationSpeedButton.onClick.AddListener(delegate { UpgradeCar("accelerationSpeed"); });
+        upgradeMaxSteeringAngleButton.onClick.AddListener(delegate { UpgradeCar("maxSteeringAngle"); });
+        upgradeSteeringSpeedButton.onClick.AddListener(delegate { UpgradeCar("steeringSpeed"); });
+        upgradeBrakeForceButton.onClick.AddListener(delegate { UpgradeCar("brakeForce"); });
+        upgradeDecelerationButton.onClick.AddListener(delegate { UpgradeCar("deceleration"); });
+        upgradeDriftButton.onClick.AddListener(delegate { UpgradeCar("drift"); });
     }
     private void OpenShop()
     {

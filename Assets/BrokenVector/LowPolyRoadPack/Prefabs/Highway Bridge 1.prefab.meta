@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8d7240f2f0843e442b11595c5465dbf7
+labels:
+- street
+- road
+- freeway
+- low-poly
+- lowpoly
+timeCreated: 1468492180
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67288
+  packageName: Low Poly Road Pack
+  packageVersion: 1.3
+  assetPath: Assets/BrokenVector/LowPolyRoadPack/Prefabs/Highway Bridge 1.prefab
+  uploadId: 253916

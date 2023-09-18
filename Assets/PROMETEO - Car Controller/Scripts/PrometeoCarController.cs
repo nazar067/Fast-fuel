@@ -77,83 +77,104 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "maxReverseSpeed":
-                if (maxReverseSpeed < 120)
+                if (maxReverseSpeed < 120 && Money.Instance.money >= 10)
                 {
                     maxReverseSpeed += 10;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetInt("maxReverseSpeed", maxReverseSpeed);
+                    Upgrades.Instance.UpgradeCarText(detail);
                 }
                 else if (maxReverseSpeed > 120)
                 {
                     maxReverseSpeed = 120;
+                    PlayerPrefs.SetInt("maxReverseSpeed", maxReverseSpeed);
                 }
                 break;
             case "accelerationSpeed":
-                if (accelerationMultiplier < 10)
+                if (accelerationMultiplier < 10 && Money.Instance.money >= 10)
                 {
                     accelerationMultiplier += 1;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetInt("accelerationSpeed", accelerationMultiplier);
+                    Upgrades.Instance.UpgradeCarText(detail);
                 }
                 else if (accelerationMultiplier > 10)
                 {
                     accelerationMultiplier = 10;
+                    PlayerPrefs.SetInt("accelerationSpeed", accelerationMultiplier);
                 }
                 break;
             case "maxSteeringAngle":
-                if (maxSteeringAngle < 45)
+                if (maxSteeringAngle < 45 && Money.Instance.money >= 10)
                 {
                     maxSteeringAngle += 5;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetInt("maxSteeringAngle", maxSteeringAngle);
+                    Upgrades.Instance.UpgradeCarText(detail);
                 }
                 else if (maxSteeringAngle > 45)
                 {
                     maxSteeringAngle = 45;
+                    PlayerPrefs.SetInt("maxSteeringAngle", maxSteeringAngle);
                 }
                 break;
             case "steeringSpeed":
-                if (steeringSpeed < 1)
+                if (steeringSpeed < 1 && Money.Instance.money >= 10)
                 {
                     steeringSpeed += 0.1f;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetFloat("steeringSpeed", steeringSpeed);
+                    Upgrades.Instance.UpgradeCarText(detail);
                 }
                 else if (steeringSpeed > 1)
                 {
                     steeringSpeed = 1;
+                    PlayerPrefs.SetFloat("steeringSpeed", steeringSpeed);
                 }
                 break;
             case "brakeForce":
-                if (brakeForce < 600)
+                if (brakeForce < 600 && Money.Instance.money >= 10)
                 {
                     brakeForce += 100;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetInt("brakeForce", brakeForce);
+                    Upgrades.Instance.UpgradeCarText(detail);
                 }
                 else if (brakeForce > 600)
                 {
                     brakeForce = 600;
+                    PlayerPrefs.SetInt("brakeForce", brakeForce);
                 }
                 break;
             case "deceleration":
-                if (decelerationMultiplier < 10)
+                if (decelerationMultiplier < 10 && Money.Instance.money >= 10)
                 {
                     decelerationMultiplier += 1;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetInt("deceleration", decelerationMultiplier);
+                    Upgrades.Instance.UpgradeCarText(detail);
                 }
                 else if (decelerationMultiplier > 10)
                 {
                     decelerationMultiplier = 10;
+                    PlayerPrefs.SetInt("deceleration", decelerationMultiplier);
                 }
                 break;
             case "drift":
-                if (handbrakeDriftMultiplier < 10)
+                if (handbrakeDriftMultiplier < 10 && Money.Instance.money >= 10) 
                 {
                     handbrakeDriftMultiplier += 1;
+                    Money.Instance.MinusMoney(10);
+                    PlayerPrefs.SetInt("drift", handbrakeDriftMultiplier);
+                    Upgrades.Instance.UpgradeCarText(detail);
                 }
                 else if (handbrakeDriftMultiplier > 10)
                 {
                     handbrakeDriftMultiplier = 10;
+                    PlayerPrefs.SetInt("drift", handbrakeDriftMultiplier);
                 }
                 break;
         }   
-    }
-    private void UpdateText()
-    {
-/*        if (fuelRate != null)
-        {
-            fuelRate.text = "Fuel rate: " + fuelDepletionRate.ToString("F0");
-        }*/
     }
     //WHEELS
 
