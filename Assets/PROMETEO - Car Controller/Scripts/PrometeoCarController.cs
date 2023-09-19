@@ -28,6 +28,13 @@ public class PrometeoCarController : MonoBehaviour
             Destroy(gameObject); // Если уже существует другой экземпляр, уничтожаем этот.
         }
         maxSpeed = PlayerPrefs.GetInt("maxSpeed", 20);
+        maxReverseSpeed = PlayerPrefs.GetInt("maxReverseSpeed", 10);
+        accelerationMultiplier = PlayerPrefs.GetInt("accelerationSpeed", 6);
+        maxSteeringAngle = PlayerPrefs.GetInt("maxSteeringAngle", 35);
+        steeringSpeed = PlayerPrefs.GetFloat("steeringSpeed", 0.5f);
+        brakeForce = PlayerPrefs.GetInt("brakeForce", 100);
+        decelerationMultiplier = PlayerPrefs.GetInt("deceleration", 1);
+        handbrakeDriftMultiplier = PlayerPrefs.GetInt("drift", 1);
         // Другие инициализации и настройки...
     }
     //CAR SETUP

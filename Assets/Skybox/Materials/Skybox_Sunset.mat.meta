@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4067de1a02072244798361060c5e7325
+timeCreated: 1461296179
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 61217
+  packageName: Free HDR Sky
+  packageVersion: 1.0
+  assetPath: Assets/Skybox/Materials/Skybox_Sunset.mat
+  uploadId: 114142

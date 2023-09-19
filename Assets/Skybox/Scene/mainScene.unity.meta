@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7540eab4397561d4cb2a37cb06761818
+timeCreated: 1461300200
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 61217
+  packageName: Free HDR Sky
+  packageVersion: 1.0
+  assetPath: Assets/Skybox/Scene/mainScene.unity
+  uploadId: 114142
