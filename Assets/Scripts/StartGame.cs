@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StartGame : MonoBehaviour
 {
     public Button startButton;
+    public Button pauseButton;
 
     public GameObject gameCanvas;
     public GameObject menuCanvas;
@@ -38,6 +39,7 @@ public class StartGame : MonoBehaviour
         menuCamera.gameObject.SetActive(false);
         car.GetComponent<Animator>().enabled = false;
         PrometeoCarController.instance.carEngineSound.mute = false;
+        pauseButton.gameObject.SetActive(true);
     }
     public void ButtonDown()
     {
