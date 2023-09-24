@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PauseGame : MonoBehaviour
 {
     public Button pauseButton;
+    public Button exitButton;
     public GameObject pauseCanvas;
     public GameObject carButtons;
     private bool isPaused = false;
@@ -13,6 +14,7 @@ public class PauseGame : MonoBehaviour
     private void Start()
     {
         pauseButton.onClick.AddListener(Pause);
+        exitButton.onClick.AddListener(Pause);
     }
     public void Pause()
     {
