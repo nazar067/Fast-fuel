@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class FuelIndicator : MonoBehaviour
 {
-    public GameObject restartButton;
-    public GameObject adResumeButton;
+    public GameObject loseCanvas;
+    public GameObject carButtons;
     public static FuelIndicator Instance;
 
     private float currentFuel; 
@@ -45,8 +45,9 @@ public class FuelIndicator : MonoBehaviour
             currentFuel = 0;
             PrometeoCarController.instance.useSounds = false;
             PrometeoCarController.instance.useTouchControls = false;
-            restartButton.SetActive(true);
-            adResumeButton.SetActive(true);
+
+            loseCanvas.SetActive(true);
+            carButtons.SetActive(false);
         }
 
         UpdateFuelText(); 

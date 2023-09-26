@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PauseGame : MonoBehaviour
 {
     public Button pauseButton;
+    public Button resumeButton;
     public Button exitButton;
     public GameObject pauseCanvas;
     public GameObject carButtons;
@@ -15,24 +16,36 @@ public class PauseGame : MonoBehaviour
     {
         pauseButton.onClick.AddListener(Pause);
         exitButton.onClick.AddListener(Pause);
+        resumeButton.onClick.AddListener(Pause);
+    }
+    private void Update()
+    {
+        if (isPaused)
+        {
+            PrometeoCarController.instance.carEngineSound.mute = true;
+        }
+        if(!isPaused)
+        {
+            PrometeoCarController.instance.useSounds = true;
+        }
     }
     public void Pause()
     {
         isPaused = !isPaused;
 
-        Time.timeScale = isPaused ? 0 : 1;
 
         if (isPaused)
         {
+            pauseButton.gameObject.SetActive(false);
             pauseCanvas.SetActive(true);
             carButtons.SetActive(false);
-            PrometeoCarController.instance.carEngineSound.mute = true;
         }
         else
         {
             pauseCanvas.SetActive(false);
             carButtons.SetActive(true);
-            PrometeoCarController.instance.carEngineSound.mute = false;
+            pauseButton.gameObject.SetActive(true);
         }
+        Time.timeScale = isPaused ? 0 : 1;
     }
 }

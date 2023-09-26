@@ -37,14 +37,6 @@ public class UpgradesInfo : MonoBehaviour
 
         languageText = eventSystem.GetComponent<LanguageText>();
     }
-
-    void Update()
-    {
-        if (languageText != null)
-        {
-            string enText = languageText.text[0];
-        }
-    }
     public void UpgradeInfo(string detail)
     {
         panelInfo.SetActive(true);

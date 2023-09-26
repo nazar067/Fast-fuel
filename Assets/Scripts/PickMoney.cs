@@ -6,6 +6,9 @@ public class PickMoney : MonoBehaviour
 {
     public GameObject car;
     public int moneyValue = 1;
+
+    private float newPositionX;
+    private float newPositionZ;
     void Update()
     {
         this.gameObject.transform.Rotate(0, 0, 20 * Time.deltaTime);
@@ -21,11 +24,12 @@ public class PickMoney : MonoBehaviour
     }
     private void Spawn()
     {
-
+        newPositionX = car.transform.position.x + Random.Range(-5, 10);
+        newPositionZ = car.transform.position.z + Random.Range(-5, 10);
         if (this.gameObject != null)
         {
             GameObject money = Instantiate(this.gameObject);
-            money.transform.position = new Vector3(Random.Range(0f, 10f), 0.1f, Random.Range(0f, 10f));
+            money.transform.position = new Vector3(newPositionX, 0.1f, newPositionZ);
             Money script = money.GetComponent<Money>();
             if (script != null)
             {

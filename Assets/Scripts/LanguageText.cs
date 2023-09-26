@@ -12,7 +12,11 @@ public class LanguageText : MonoBehaviour
     private void Start()
     {
         language = PlayerPrefs.GetInt("language", language);
-        //textLine = GetComponent<Text>();
-        //textLine.text = "" + text[language];
+        textLine = GetComponent<Text>();
+        if (textLine)
+        {
+            textLine.text = "" + text[language];
+        }
+        
     }
 }

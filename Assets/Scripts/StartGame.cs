@@ -25,7 +25,6 @@ public class StartGame : MonoBehaviour
     float scaleDownMultiplier = 1.2f;
     private void Start()
     {
-        PrometeoCarController.instance.carEngineSound.mute = true;
         startButton.onClick.AddListener(GameStart);
         rectTransform = GetComponent<RectTransform>();
         initialScale = rectTransform.localScale;
@@ -38,7 +37,6 @@ public class StartGame : MonoBehaviour
         gameCanvas.SetActive(true);
         menuCamera.gameObject.SetActive(false);
         car.GetComponent<Animator>().enabled = false;
-        PrometeoCarController.instance.carEngineSound.mute = false;
         pauseButton.gameObject.SetActive(true);
     }
     public void ButtonDown()
