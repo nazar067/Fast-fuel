@@ -8,6 +8,7 @@ public class FuelIndicator : MonoBehaviour
 {
     public GameObject loseCanvas;
     public GameObject carButtons;
+    public GameObject pauseButton;
     public static FuelIndicator Instance;
 
     private float currentFuel; 
@@ -48,6 +49,7 @@ public class FuelIndicator : MonoBehaviour
 
             loseCanvas.SetActive(true);
             carButtons.SetActive(false);
+            pauseButton.SetActive(false);
         }
 
         UpdateFuelText(); 
