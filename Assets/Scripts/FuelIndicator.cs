@@ -11,15 +11,20 @@ public class FuelIndicator : MonoBehaviour
     public GameObject pauseButton;
     public static FuelIndicator Instance;
 
-    private float currentFuel; 
+    private float currentFuel;
     public Text fuelText;
     private float startingFuel;
     private float fuelDepletionRate;
 
     private void Start()
     {
-        currentFuel = startingFuel; 
-        UpdateFuelText(); 
+        if (Upgrades.Instance != null)
+        {
+            startingFuel = Upgrades.Instance.startingFuel;
+            fuelDepletionRate = Upgrades.Instance.fuelDepletionRate;
+        }
+        currentFuel = startingFuel;
+        UpdateFuelText();
     }
     private void Awake()
     {
@@ -52,7 +57,7 @@ public class FuelIndicator : MonoBehaviour
             pauseButton.SetActive(false);
         }
 
-        UpdateFuelText(); 
+        UpdateFuelText();
     }
     public void AddFuel(int countFuel)
     {

@@ -69,10 +69,10 @@ public class PrometeoCarController : MonoBehaviour
         switch (detail)
         {
             case "maxSpeed":
-                if (maxSpeed < 190 && Money.Instance.money >= 10)
+                if (maxSpeed < 190 && Money.Instance.money >= 50)
                 {
                     maxSpeed += 10;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(50);
                     PlayerPrefs.SetInt("maxSpeed", maxSpeed);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
@@ -83,10 +83,10 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "maxReverseSpeed":
-                if (maxReverseSpeed < 120 && Money.Instance.money >= 10)
+                if (maxReverseSpeed < 120 && Money.Instance.money >= 40)
                 {
                     maxReverseSpeed += 10;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(40);
                     PlayerPrefs.SetInt("maxReverseSpeed", maxReverseSpeed);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
@@ -97,10 +97,10 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "accelerationSpeed":
-                if (accelerationMultiplier < 10 && Money.Instance.money >= 10)
+                if (accelerationMultiplier < 10 && Money.Instance.money >= 65)
                 {
                     accelerationMultiplier += 1;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(65);
                     PlayerPrefs.SetInt("accelerationSpeed", accelerationMultiplier);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
@@ -111,10 +111,10 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "maxSteeringAngle":
-                if (maxSteeringAngle < 45 && Money.Instance.money >= 10)
+                if (maxSteeringAngle < 45 && Money.Instance.money >= 55)
                 {
                     maxSteeringAngle += 5;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(55);
                     PlayerPrefs.SetInt("maxSteeringAngle", maxSteeringAngle);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
@@ -125,10 +125,10 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "steeringSpeed":
-                if (steeringSpeed < 1 && Money.Instance.money >= 10)
+                if (steeringSpeed < 1 && Money.Instance.money >= 60)
                 {
                     steeringSpeed += 0.1f;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(60);
                     PlayerPrefs.SetFloat("steeringSpeed", steeringSpeed);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
@@ -139,10 +139,10 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "brakeForce":
-                if (brakeForce < 600 && Money.Instance.money >= 10)
+                if (brakeForce < 600 && Money.Instance.money >= 50)
                 {
                     brakeForce += 100;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(50);
                     PlayerPrefs.SetInt("brakeForce", brakeForce);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
@@ -153,10 +153,10 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "deceleration":
-                if (decelerationMultiplier < 10 && Money.Instance.money >= 10)
+                if (decelerationMultiplier < 10 && Money.Instance.money >= 55)
                 {
                     decelerationMultiplier += 1;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(55);
                     PlayerPrefs.SetInt("deceleration", decelerationMultiplier);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
@@ -167,10 +167,10 @@ public class PrometeoCarController : MonoBehaviour
                 }
                 break;
             case "drift":
-                if (handbrakeDriftMultiplier < 10 && Money.Instance.money >= 10) 
+                if (handbrakeDriftMultiplier < 10 && Money.Instance.money >= 60) 
                 {
                     handbrakeDriftMultiplier += 1;
-                    Money.Instance.MinusMoney(10);
+                    Money.Instance.MinusMoney(60);
                     PlayerPrefs.SetInt("drift", handbrakeDriftMultiplier);
                     Upgrades.Instance.UpgradeCarText(detail);
                 }
