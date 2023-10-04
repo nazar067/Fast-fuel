@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour
 {
+    public Canvas miniMap;
+
     public Button startButton;
     public Button pauseButton;
 
@@ -15,6 +17,7 @@ public class StartGame : MonoBehaviour
 
     public Camera mainCamera;
     public Camera menuCamera;
+    public Camera miniMapCamera;
 
     public bool changeScaleOnPressed = true;
 
@@ -38,6 +41,8 @@ public class StartGame : MonoBehaviour
         menuCamera.gameObject.SetActive(false);
         car.GetComponent<Animator>().enabled = false;
         pauseButton.gameObject.SetActive(true);
+        miniMapCamera.gameObject.SetActive(true);
+        miniMap.gameObject.SetActive(true);
     }
     public void ButtonDown()
     {
