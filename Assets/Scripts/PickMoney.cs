@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PickMoney : MonoBehaviour
 {
+    private List<int> moneyList = new List<int>() { 1, 1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 9, 10};  
+
     public GameObject car;
-    public int moneyValue = 1;
+    public int moneyValue;
 
     private float newPositionX;
     private float newPositionZ;
+
+    private void Awake()
+    {
+        int randMoney = Random.Range(0, moneyList.Count);
+        moneyValue = moneyList[randMoney];
+    }
     void Update()
     {
         this.gameObject.transform.Rotate(0, 0, 20 * Time.deltaTime);
