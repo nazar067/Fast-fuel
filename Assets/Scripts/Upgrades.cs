@@ -9,7 +9,7 @@ public class Upgrades : MonoBehaviour
 {
     public static Upgrades Instance;
 
-    public float startingFuel = 100f;
+    public float startingFuel = 150f;
     public float fuelDepletionRate = 7f;
 
     public EventSystem eventSystem;

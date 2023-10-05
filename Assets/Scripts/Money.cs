@@ -14,6 +14,7 @@ public class Money : MonoBehaviour
     public int money = 0;
     private void Start()
     {
+        PlayerPrefs.SetInt("Money", 10000);
         UpdateMoneyText();
     }
 

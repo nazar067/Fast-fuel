@@ -62,6 +62,10 @@ public class FuelIndicator : MonoBehaviour
     public void AddFuel(int countFuel)
     {
         currentFuel += countFuel;
+        if (currentFuel > 150)
+        {
+            currentFuel = 150;
+        }
         UpdateFuelText();
     }
     private void UpdateFuelText()
