@@ -50,7 +50,7 @@ public class Score : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = score.ToString();
         }
     }
     private void UpdateHighScoreText()

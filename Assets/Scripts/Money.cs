@@ -14,7 +14,6 @@ public class Money : MonoBehaviour
     public int money = 0;
     private void Start()
     {
-        PlayerPrefs.SetInt("Money", 10000);
         UpdateMoneyText();
     }
 
@@ -56,7 +55,7 @@ public class Money : MonoBehaviour
     {
         if (moneyText != null)
         {
-            moneyText.text = "Money: " + money.ToString();
+            moneyText.text = money.ToString();
             moneyTextShop.text = moneyText.text;
         }
     }

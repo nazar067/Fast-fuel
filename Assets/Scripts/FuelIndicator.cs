@@ -72,7 +72,11 @@ public class FuelIndicator : MonoBehaviour
     {
         if (fuelText != null)
         {
-            fuelText.text = "Fuel: " + currentFuel.ToString("F0");
+            fuelText.text = currentFuel.ToString("F0");
         }
+    }
+    public float CurrentFuel()
+    {
+        return currentFuel;
     }
 }

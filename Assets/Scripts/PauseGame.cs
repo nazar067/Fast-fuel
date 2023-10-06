@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PauseGame : MonoBehaviour
 {
+    public AudioSource fuelSound;
     public Button pauseButton;
     public Button resumeButton;
     public Button exitButton;
@@ -39,12 +40,17 @@ public class PauseGame : MonoBehaviour
             pauseButton.gameObject.SetActive(false);
             pauseCanvas.SetActive(true);
             carButtons.SetActive(false);
+            fuelSound.mute = true;
         }
         else
         {
             pauseCanvas.SetActive(false);
             carButtons.SetActive(true);
             pauseButton.gameObject.SetActive(true);
+            if(FuelIndicator.Instance.CurrentFuel() <= 30)
+            {
+                fuelSound.mute = false;
+            }
         }
         Time.timeScale = isPaused ? 0 : 1;
     }
