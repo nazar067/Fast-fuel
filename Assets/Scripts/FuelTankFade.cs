@@ -12,13 +12,18 @@ public class FuelTankFade : MonoBehaviour
 
     private float elapsedTime = 0.0f;
     private bool increasingAlpha = true;
+    private int sound;
 
     void Update()
     {
+        sound = PlayerPrefs.GetInt("volumeSound");
         if(FuelIndicator.Instance.CurrentFuel() <= 30)
         {
-            fuelSound.mute = false;
-            fuelSound.volume = 0.3f;
+            if(sound == 1)
+            {
+                fuelSound.mute = false;
+                fuelSound.volume = 0.3f;
+            }
             // Получаем текущую прозрачность изображения.
             float currentAlpha = myImage.color.a;
 
@@ -40,7 +45,7 @@ public class FuelTankFade : MonoBehaviour
             myImage.color = new Color(myImage.color.r, myImage.color.g, myImage.color.b, 255);
             fuelSound.mute = true;
         }
-        if(FuelIndicator.Instance.CurrentFuel() <= 0)
+        if (FuelIndicator.Instance.CurrentFuel() <= 0)
         {
             fuelSound.mute = true;
         }

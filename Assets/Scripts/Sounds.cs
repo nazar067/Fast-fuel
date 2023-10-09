@@ -49,12 +49,14 @@ public class Sounds : MonoBehaviour
         {
             PrometeoCarController.instance.carEngineSound.mute = false;
             PrometeoCarController.instance.tireScreechSound.mute = false;
-            if(FuelIndicator.Instance.CurrentFuel() <= 30 && FuelIndicator.Instance != null)
+            if (FuelIndicator.Instance != null)
             {
-                fuelSound.mute = false;
-                fuelSound.volume = 0.3f;
+                if (FuelIndicator.Instance.CurrentFuel() <= 30)
+                {
+                    fuelSound.mute = false;
+                    fuelSound.volume = 0.3f;
+                }
             }
-
             soundButton.GetComponent<Image>().sprite = sound_on;
             soundButtonPause.GetComponent<Image>().sprite = sound_on;
         }

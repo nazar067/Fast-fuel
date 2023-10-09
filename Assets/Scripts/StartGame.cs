@@ -21,6 +21,9 @@ public class StartGame : MonoBehaviour
 
     public bool changeScaleOnPressed = true;
 
+    public Interstitial ad;
+    public Reward rAd;
+
     [HideInInspector]
     public bool buttonPressed = false;
     RectTransform rectTransform;
@@ -31,6 +34,7 @@ public class StartGame : MonoBehaviour
         startButton.onClick.AddListener(GameStart);
         rectTransform = GetComponent<RectTransform>();
         initialScale = rectTransform.localScale;
+        rAd.LoadAd();
     }
 
     private void GameStart()

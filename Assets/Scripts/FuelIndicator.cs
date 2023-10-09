@@ -56,6 +56,15 @@ public class FuelIndicator : MonoBehaviour
             carButtons.SetActive(false);
             pauseButton.SetActive(false);
         }
+        if(currentFuel > 0)
+        {
+            PrometeoCarController.instance.useSounds = true;
+            PrometeoCarController.instance.useTouchControls = true;
+
+            loseCanvas.SetActive(false);
+            carButtons.SetActive(true);
+            pauseButton.SetActive(true);
+        }
 
         UpdateFuelText();
     }
@@ -78,5 +87,9 @@ public class FuelIndicator : MonoBehaviour
     public float CurrentFuel()
     {
         return currentFuel;
+    }
+    public void ResumeGame()
+    {
+        currentFuel = 150;
     }
 }

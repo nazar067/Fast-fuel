@@ -75,7 +75,7 @@ public class Upgrades : MonoBehaviour
         {
             if (languageText.language == 0)
             {
-                fuelRate.text = "Fuel rate: " + fuelDepletionRate.ToString("F0") + "\nPrice: 40";
+                fuelRate.text = "Fuel rate: " + fuelDepletionRate.ToString("F0") + "\n      40";
             }
             else if(languageText.language == 1)
             {
@@ -95,7 +95,7 @@ public class Upgrades : MonoBehaviour
                 if(languageText.language == 0)
                 {
                     maxSpeedText.text = "Max speed rate: \n" + PrometeoCarController.instance.maxSpeed
-                        .ToString("F0") + "/190" + "\nPrice: 50";
+                        .ToString("F0") + "/190" + "\n       50";
                 }
                 else if (languageText.language == 1)
                 {
