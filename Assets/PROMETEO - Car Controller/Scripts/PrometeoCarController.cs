@@ -516,8 +516,24 @@ public class PrometeoCarController : MonoBehaviour
 
       if(useUI){
           try{
-            float absoluteCarSpeed = Mathf.Abs(carSpeed);
-            carSpeedText.text = Mathf.RoundToInt(absoluteCarSpeed).ToString() + " KM/H";
+                float absoluteCarSpeed = Mathf.Abs(carSpeed);
+                carSpeedText.text = Mathf.RoundToInt(absoluteCarSpeed).ToString() + " KM/H";
+                if(Mathf.RoundToInt(absoluteCarSpeed) == 0)
+                {
+                    carSpeedText.color = Color.white;
+                }
+                else if(Mathf.RoundToInt(absoluteCarSpeed) > 0 && Mathf.RoundToInt(absoluteCarSpeed) < 30)
+                {
+                    carSpeedText.color = Color.green;
+                }
+                else if(Mathf.RoundToInt(absoluteCarSpeed) > 30 && Mathf.RoundToInt(absoluteCarSpeed) < 65)
+                {
+                    carSpeedText.color = Color.yellow;
+                }
+                else if(Mathf.RoundToInt(absoluteCarSpeed) > 65)
+                {
+                    carSpeedText.color = Color.red;
+                }
           }catch(Exception ex){
             Debug.LogWarning(ex);
           }

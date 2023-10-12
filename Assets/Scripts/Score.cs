@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
     public static Score Instance;
+    public EventSystem eventSystem;
 
     public Text scoreText;
     public Text highScoreText;
 
     private int score = 0;
     private int highScore = 0;
+
+    private LanguageText languageText;
 
     private void Awake()
     {
@@ -21,13 +25,16 @@ public class Score : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
     private void Start()
     {
+        languageText = eventSystem.GetComponent<LanguageText>();
+        languageText.language = PlayerPrefs.GetInt("language", 0);
+
         UpdateScoreText();
         UpdateHighScoreText();
     }
@@ -57,7 +64,18 @@ public class Score : MonoBehaviour
     {
         if (highScoreText != null)
         {
-            highScoreText.text = "HighScore: " + highScore.ToString();
+            if (languageText.language == 0)
+            {
+                highScoreText.text = "Top score: " + highScore.ToString();
+            }
+            else if(languageText.language == 1)
+            {
+                highScoreText.text = "Лучший результат: " + highScore.ToString();
+            }
+            else if(languageText.language == 2)
+            {
+                highScoreText.text = "Кращий результат: " + highScore.ToString();
+            }
         }
     }
 }

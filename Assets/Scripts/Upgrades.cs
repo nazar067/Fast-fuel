@@ -75,15 +75,15 @@ public class Upgrades : MonoBehaviour
         {
             if (languageText.language == 0)
             {
-                fuelRate.text = "Fuel rate: " + fuelDepletionRate.ToString("F0") + "\n      40";
+                fuelRate.text = "Fuel Efficiency: " + fuelDepletionRate.ToString("F0");
             }
             else if(languageText.language == 1)
             {
-                fuelRate.text = "Расход топлива: " + fuelDepletionRate.ToString("F0") + "\nЦена: 40";
+                fuelRate.text = "Расход топлива: " + fuelDepletionRate.ToString("F0");
             }
             else if (languageText.language == 2)
             {
-                fuelRate.text = "Витрата палива: " + fuelDepletionRate.ToString("F0") + "\nЦіна: 40";
+                fuelRate.text = "Витрата пального: " + fuelDepletionRate.ToString("F0");
             }
         }
     }
@@ -94,137 +94,137 @@ public class Upgrades : MonoBehaviour
             case "maxSpeed":
                 if(languageText.language == 0)
                 {
-                    maxSpeedText.text = "Max speed rate: \n" + PrometeoCarController.instance.maxSpeed
-                        .ToString("F0") + "/190" + "\n       50";
+                    maxSpeedText.text = "Maximum Speed: \n" + PrometeoCarController.instance.maxSpeed
+                        .ToString("F0") + "/190";
                 }
                 else if (languageText.language == 1)
                 {
                     maxSpeedText.text = "Максимальная скорость: \n" + PrometeoCarController.instance.maxSpeed
-                        .ToString("F0") + "/190" + "\nЦена: 50";
+                        .ToString("F0") + "/190";
                 }
                 else if (languageText.language == 2)
                 {
                     maxSpeedText.text = "Максимальна швидкість: \n" + PrometeoCarController.instance.maxSpeed
-                        .ToString("F0") + "/190" + "\nЦіна: 50";
+                        .ToString("F0") + "/190";
                 }
                 break;
             case "maxReverseSpeed":
                 if (languageText.language == 0)
                 {
-                    maxReverseSpeedText.text = "Max reverse speed rate: \n" + PrometeoCarController.instance.maxReverseSpeed
-                        .ToString("F0") + "/120" + "\nPrice: 40";
+                    maxReverseSpeedText.text = "Reverse Speed: \n" + PrometeoCarController.instance.maxReverseSpeed
+                        .ToString("F0") + "/120";
                 }
                 else if(languageText.language == 1)
                 {
                     maxReverseSpeedText.text = "Скорость задом: \n" + PrometeoCarController.instance.maxReverseSpeed
-                        .ToString("F0") + "/120" + "\nЦена: 40";
+                        .ToString("F0") + "/120";
                 }
                 else if (languageText.language == 2)
                 {
-                    maxReverseSpeedText.text = "Задня швидкість: \n" + PrometeoCarController.instance.maxReverseSpeed
-                        .ToString("F0") + "/120" + "\nЦіна: 40";
+                    maxReverseSpeedText.text = "Швидкість заднього ходу: \n" + PrometeoCarController.instance.maxReverseSpeed
+                        .ToString("F0") + "/120";
                 }
                 break;
             case "accelerationSpeed":
                 if (languageText.language == 0)
                 {
-                    accelerationMultiplierText.text = "Acceleration speed rate: \n" + PrometeoCarController.instance.accelerationMultiplier
-                        .ToString("F0") + "/10" + "\nPrice: 65";
+                    accelerationMultiplierText.text = "Acceleration Speed: \n" + PrometeoCarController.instance.accelerationMultiplier
+                        .ToString("F0") + "/10";
                 }
                 else if (languageText.language == 1)
                 {
                     accelerationMultiplierText.text = "Скорость разгона: \n" + PrometeoCarController.instance.accelerationMultiplier
-                        .ToString("F0") + "/10" + "\nЦена: 65";
+                        .ToString("F0") + "/10";
                 }
                 else if (languageText.language == 2)
                 {
                     accelerationMultiplierText.text = "Швидкість розгону: \n" + PrometeoCarController.instance.accelerationMultiplier
-                        .ToString("F0") + "/10" + "\nЦіна: 65";
+                        .ToString("F0") + "/10";
                 }
                 break;
             case "maxSteeringAngle":
                 if (languageText.language == 0)
                 {
-                    maxSteeringAngleText.text = "Max Steering Angle rate: \n" + PrometeoCarController.instance.maxSteeringAngle
-                        .ToString("F0") + "/45" + "\nPrice: 55";
+                    maxSteeringAngleText.text = "Turning Angle: \n" + PrometeoCarController.instance.maxSteeringAngle
+                        .ToString("F0") + "/45";
                 }
                 else if (languageText.language == 1)
                 {
                     maxSteeringAngleText.text = "Угол поворота: \n" + PrometeoCarController.instance.maxSteeringAngle
-                        .ToString("F0") + "/45" + "\nЦeна: 55";
+                        .ToString("F0") + "/45";
                 }
                 else if (languageText.language == 2)
                 {
                     maxSteeringAngleText.text = "Кут повороту: \n" + PrometeoCarController.instance.maxSteeringAngle
-                        .ToString("F0") + "/45" + "\nЦіна: 55";
+                        .ToString("F0") + "/45";
                 }
                 break;
             case "steeringSpeed":
                 if (languageText.language == 0)
                 {
-                    steeringSpeedText.text = "Steering speed rate: \n" + PrometeoCarController.instance.steeringSpeed
-                        .ToString() + "/1" + "\nPrice: 60";
+                    steeringSpeedText.text = "Turn Entry Speed: \n" + PrometeoCarController.instance.steeringSpeed
+                        .ToString() + "/1";
                 }
                 else if (languageText.language == 1)
                 {
                     steeringSpeedText.text = "Скорость поворота: \n" + PrometeoCarController.instance.steeringSpeed
-                        .ToString() + "/1" + "\nЦeна: 60";
+                        .ToString() + "/1";
                 }
                 else if (languageText.language == 2)
                 {
-                    steeringSpeedText.text = "Швидкість повороту: \n" + PrometeoCarController.instance.steeringSpeed
-                        .ToString() + "/1" + "\nЦіна: 60";
+                    steeringSpeedText.text = "Швидкість входу в поворот: \n" + PrometeoCarController.instance.steeringSpeed
+                        .ToString() + "/1";
                 }
                 break;
             case "brakeForce":
                 if (languageText.language == 0)
                 {
-                    brakeForceText.text = "Brake Force rate: \n" + PrometeoCarController.instance.brakeForce
-                        .ToString("F0") + "/600" + "\nPrice: 50";
+                    brakeForceText.text = "Handbrake Force: \n" + PrometeoCarController.instance.brakeForce
+                        .ToString("F0") + "/600";
                 }
                 else if (languageText.language == 1)
                 {
                     brakeForceText.text = "Сила ручного тормоза: \n" + PrometeoCarController.instance.brakeForce
-                        .ToString("F0") + "/600" + "\nЦeна: 50";
+                        .ToString("F0") + "/600";
                 }
                 else if (languageText.language == 2)
                 {
-                    brakeForceText.text = "Якість ручного гальма: \n" + PrometeoCarController.instance.brakeForce
-                        .ToString("F0") + "/600" + "\nЦіна: 50";
+                    brakeForceText.text = "Сила ручного гальма: \n" + PrometeoCarController.instance.brakeForce
+                        .ToString("F0") + "/600";
                 }
                 break;
             case "deceleration":
                 if (languageText.language == 0)
                 {
-                    decelerationMultiplierText.text = "Deceleration rate: \n" + PrometeoCarController.instance.decelerationMultiplier
-                        .ToString("F0") + "/10" + "\nPrice: 55";
+                    decelerationMultiplierText.text = "Brake Force: \n" + PrometeoCarController.instance.decelerationMultiplier
+                        .ToString("F0") + "/10";
                 }
                 else if(languageText.language == 1)
                 {
                     decelerationMultiplierText.text = "Сила тормозов: \n" + PrometeoCarController.instance.decelerationMultiplier
-                        .ToString("F0") + "/10" + "\nЦeна: 55";
+                        .ToString("F0") + "/10";
                 }
                 else if (languageText.language == 2)
                 {
-                    decelerationMultiplierText.text = "Сила гальма: \n" + PrometeoCarController.instance.decelerationMultiplier
-                        .ToString("F0") + "/10" + "\nЦіна: 55";
+                    decelerationMultiplierText.text = "Сила гальм: \n" + PrometeoCarController.instance.decelerationMultiplier
+                        .ToString("F0") + "/10";
                 }
                 break;
             case "drift":
                 if (languageText.language == 0)
                 {
-                    handbrakeDriftMultiplierText.text = "Drift rate: \n" + PrometeoCarController.instance.handbrakeDriftMultiplier
-                        .ToString("F0") + "/10" + "\nPrice: 60";
+                    handbrakeDriftMultiplierText.text = "Drift Quality: \n" + PrometeoCarController.instance.handbrakeDriftMultiplier
+                        .ToString("F0") + "/10";
                 }
                 else if (languageText.language == 1)
                 {
                     handbrakeDriftMultiplierText.text = "Качество дрифта: \n" + PrometeoCarController.instance.handbrakeDriftMultiplier
-                        .ToString("F0") + "/10" + "\nЦeна: 60";
+                        .ToString("F0") + "/10";
                 }
                 else if (languageText.language == 2)
                 {
                     handbrakeDriftMultiplierText.text = "Якість дрифту: \n" + PrometeoCarController.instance.handbrakeDriftMultiplier
-                        .ToString("F0") + "/10" + "\nЦіна: 60";
+                        .ToString("F0") + "/10";
                 }
                 break;
         }

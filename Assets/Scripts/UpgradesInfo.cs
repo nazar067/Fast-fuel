@@ -45,148 +45,142 @@ public class UpgradesInfo : MonoBehaviour
             case "fuelInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "Fuel consumption, the lower the number, " +
-                        "the slower the fuel will be consumed(minimum 2)";
+                    infoText.text = "This upgrade reduces fuel consumption, " +
+                        "allowing your car to cover more distance on a single tank.(minimum 2)";
                 }
                 else if(languageText.language == 1)
                 {
-                    infoText.text = "Расход топлива, чем меньше число, " +
-                        "тем медленнее будет расходоваться топливо (минимум 2)";
+                    infoText.text = "Это улучшение снижает потребление топлива, " +
+                        "позволяя вашей машине проезжать большее расстояние на одном баке.(минимум 2)";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Витрата палива, чим менше число, " +
-                        "тим повільніше буде витрачатися паливо(мінімум 2)";
+                    infoText.text = "Це покращення зменшує споживання пального, " +
+                        "дозволяючи вашому автомобілю подолати більший шлях на одному баку.(мінімум 2)";
                 }
                 break;
             case "maxSpeedInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "The value of maximum speed, the higher it is, " +
-                        "the higher the maximum speed of the machine(maximum 190)";
+                    infoText.text = "Increase your car's maximum speed for a faster and more dynamic ride.";
                 }
                 else if (languageText.language == 1)
                 {
-                    infoText.text = "Чем больше значение максимальной скорости, тем она выше, " +
-                        "тем выше максимальная скорость машины(максимальная 190)";
+                    infoText.text = "Увеличьте максимальную скорость вашего автомобиля для более быстрой и динамичной езды.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Значення максимальної швидкості, чим вона вища, " +
-                        "тим більша максимальна швидкість машини (максимум 190)";
+                    infoText.text = "Збільште максимальну швидкість свого автомобілю для швидкої та динамічної поїздки.";
                 }
                 break;
             case "maxReverseSpeedInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "Maximum speed, but in reverse(maximum 120)";
+                    infoText.text = "This improvement optimizes your car's reverse speed, " +
+                        "providing better maneuverability in confined spaces.";
                 }
                 else if (languageText.language == 1)
                 {
-                    infoText.text = "Максимальная скорость, но задом (максимум 120)";
+                    infoText.text = "Это улучшение оптимизирует заднюю скорость вашей машины, " +
+                        "обеспечивая лучшую маневренность в ограниченных пространствах.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Максимальна швидкість, але заднім ходом (максимум 120)";
+                    infoText.text = "Це удосконалення оптимізує швидкість руху заднім ходом вашого автомобілю, " +
+                        "забезпечуючи кращу маневреність в обмежених просторах.";
                 }
                 break;
             case "accelerationSpeedInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "The acceleration speed of the car, in simple terms, " +
-                        "how many seconds it will accelerate from 0 to 100(maximum 10)";
+                    infoText.text = "Boost your car's acceleration speed for successful starts and efficient overtaking.";
                 }
                 else if(languageText.language == 1)
                 {
-                    infoText.text = "Скорость разгона автомобиля, проще говоря, " +
-                        "за сколько секунд он разгонится от 0 до 100 (максимум 10)";
+                    infoText.text = "Повысьте скорость разгона вашего автомобиля для успешных стартов и эффективных обгонов.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Швидкість розгону автомобіля, простіше кажучи, " +
-                        "за скільки секунд він розганяється від 0 до 100 (максимум 10)";
+                    infoText.text = "Підвищте швидкість розгону свого автомобілю для успішних стартів та ефективних обгонів.";
                 }
                 break;
             case "MaxSteeringAngleInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "Maximum steering angle of the car, the bigger it is, " +
-                        "the better the car will turn and enter the corner (maximum 45).";
+                    infoText.text = "Enhance your car's turning angle, making it more maneuverable when navigating turns.";
                 }
                 else if(languageText.language == 1)
                 {
-                    infoText.text = "Максимальный угол поворота автомобиля, чем он больше, " +
-                        "тем лучше автомобиль будет поворачивать и входить в поворот (максимум 45).";
+                    infoText.text = "Улучшьте угол поворота вашего автомобиля, делая его более маневренным при прохождении поворотов.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Максимальний кут повороту автомобіля, чим він більший, " +
-                        "тим краще автомобіль буде розвертатися і входити в поворот (максимум 45).";
+                    infoText.text = "Покращте кут повороту вашого автомобілю, роблячи його більш маневреним при проходженні поворотів.";
                 }
                 break;
             case "SteeringSpeedInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "Cornering speed, how fast the car will enter the corner, " +
-                        "the higher the value the better control(maximum 1)";
+                    infoText.text = "This upgrade increases your car's speed when entering a turn, " +
+                        "ensuring better road contact and improved handling.";
                 }
                 else if (languageText.language == 1)
                 {
-                    infoText.text = "Скорость прохождения поворотов, с какой скоростью автомобиль будет входить в поворот, " +
-                        "чем выше значение, тем лучше управление (максимум 1)";
+                    infoText.text = "Это улучшение увеличивает скорость захода вашего автомобиля в поворот, " +
+                        "обеспечивая лучший контакт с дорогой и повышенную управляемость.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Швидкість проходження повороту, як швидко автомобіль буде входити в поворот, " +
-                        "чим більше значення, тим краще керування(максимум 1)";
+                    infoText.text = "Це удосконалення збільшує швидкість входу вашого автомобілю в поворот, " +
+                        "забезпечуючи кращий контакт з дорогою та поліпшену керованість.";
                 }
                 break;
             case "brakeForceInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "Handbrake force, the higher the value, " +
-                        "the faster the car will stop(maximum 600)";
+                    infoText.text = "Increase the force of your handbrake for controlled and stylish drifts in challenging situations.";
                 }
                 else if (languageText.language == 1)
                 {
-                    infoText.text = "Сила ручного тормоза, чем больше значение, " +
-                        "тем быстрее остановится автомобиль (максимум 600)";
+                    infoText.text = " Увеличьте силу ручного тормоза для контролируемых и эффектных дрифтов в сложных ситуациях.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Сила ручного гальма, чим більше значення, " +
-                        "тим швидше автомобіль зупиниться (максимум 600)";
+                    infoText.text = "Збільште силу ручного гальма для контрольованих і стильних дрифтів в складних ситуаціях.";
                 }
                 break;
             case "DecelerationInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "Braking force, the higher the value, " +
-                        "the faster the car will stop(maximum 10)";
+                    infoText.text = "This enhancement increases the overall brake force, " +
+                        "providing better control of your car at high speeds.";
                 }
                 else if (languageText.language == 1)
                 {
-                    infoText.text = "Сила торможения, чем больше значение, " +
-                        "тем быстрее остановится автомобиль (максимум 10)";
+                    infoText.text = "Это улучшение увеличивает общую силу торможения, " +
+                        "обеспечивая лучшее управление вашим автомобилем на высоких скоростях.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Гальмівна сила, чим більше значення, " +
-                        "тим швидше зупиниться автомобіль (максимум 10)";
+                    infoText.text = "Це покращення збільшує загальну силу гальмування, " +
+                        "забезпечуючи кращий контроль вашого автомобілю на великих швидкостях.";
                 }
                 break;
             case "DriftInfo":
                 if(languageText.language == 0)
                 {
-                    infoText.text = "An indication of how much the car will skid (maximum 10)";
+                    infoText.text = "Improve the quality of your drifts for precise and stylish maneuvers. " +
+                        "This upgrade will add a new dimension to your races.";
                 }
                 else if (languageText.language == 1)
                 {
-                    infoText.text = "Показатель степени заноса автомобиля (не более 10)";
+                    infoText.text = "Повысьте качество дрифта для точного и эффектного выполнения маневров. " +
+                        "Это улучшение придаст новый характер вашим заездам.";
                 }
                 else if (languageText.language == 2)
                 {
-                    infoText.text = "Вказівка на те, наскільки сильно автомобіль буде заносити (максимум 10)";
+                    infoText.text = "Покращте якість ваших дрифтів для точних і стильних маневрів. " +
+                        "Це удосконалення додасть новий вимір ваших заїздів.";
                 }
                 break;
         }
