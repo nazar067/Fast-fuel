@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,8 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public Text highScoreText;
 
-    private int score = 0;
-    private int highScore = 0;
+    private float score = 0;
+    private float highScore = 0;
 
     private LanguageText languageText;
 
@@ -27,7 +28,7 @@ public class Score : MonoBehaviour
         {
             //Destroy(gameObject);
         }
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScore = PlayerPrefs.GetFloat("HighScore", 0);
     }
 
     private void Start()
@@ -37,6 +38,21 @@ public class Score : MonoBehaviour
 
         UpdateScoreText();
         UpdateHighScoreText();
+    }
+    private void Update()
+    {
+        if (PrometeoCarController.instance.carSpeed > 1)
+        {
+            score += 3 * Time.deltaTime;
+            UpdateScoreText();
+            if (score > highScore)
+            {
+                highScore = score;
+                // Сохраняем новый рекорд в PlayerPrefs.
+                PlayerPrefs.SetFloat("HighScore", highScore);
+            }
+        }
+        
     }
 
     public void IncreaseScore(int amount)
@@ -49,7 +65,7 @@ public class Score : MonoBehaviour
         {
             highScore = score;
             // Сохраняем новый рекорд в PlayerPrefs.
-            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.SetFloat("HighScore", highScore);
         }
     }
 
@@ -57,7 +73,7 @@ public class Score : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = score.ToString();
+            scoreText.text = score.ToString("F0");
         }
     }
     private void UpdateHighScoreText()
@@ -66,15 +82,15 @@ public class Score : MonoBehaviour
         {
             if (languageText.language == 0)
             {
-                highScoreText.text = "Top score: " + highScore.ToString();
+                highScoreText.text = "Top score: " + highScore.ToString("F0");
             }
-            else if(languageText.language == 1)
+            else if (languageText.language == 1)
             {
-                highScoreText.text = "Лучший результат: " + highScore.ToString();
+                highScoreText.text = "Лучший результат: " + highScore.ToString("F0");
             }
-            else if(languageText.language == 2)
+            else if (languageText.language == 2)
             {
-                highScoreText.text = "Кращий результат: " + highScore.ToString();
+                highScoreText.text = "Кращий результат: " + highScore.ToString("F0");
             }
         }
     }

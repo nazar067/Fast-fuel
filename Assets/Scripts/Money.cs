@@ -51,7 +51,7 @@ public class Money : MonoBehaviour
             PlayerPrefs.SetInt("Money", money);
         }
     }
-    private void UpdateMoneyText()
+    public void UpdateMoneyText()
     {
         if (moneyText != null)
         {

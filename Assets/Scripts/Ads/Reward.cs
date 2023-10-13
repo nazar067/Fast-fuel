@@ -13,6 +13,9 @@ public class Reward : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
 
     private string adID;
 
+    private bool rewardGiven = false;
+
+
     private void Awake()
     {
         adID = (Application.platform == RuntimePlatform.IPhonePlayer)
@@ -64,6 +67,7 @@ public class Reward : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
 
     public void OnUnityAdsShowStart(string placementId)
     {
+
     }
 
     public void OnUnityAdsShowClick(string placementId)
@@ -72,10 +76,15 @@ public class Reward : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
 
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
     {
-        if (adUnitId.Equals(adID) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        if (adUnitId.Equals(adID) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED) && !rewardGiven)
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             FuelIndicator.Instance.ResumeGame();
+            Money.Instance.money += 15;
+            Money.Instance.UpdateMoneyText();
+            PlayerPrefs.SetInt("Money", Money.Instance.money);
+
+            rewardGiven = true;
         }
     }
     private void OnDestroy()

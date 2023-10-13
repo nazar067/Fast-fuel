@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fuel : MonoBehaviour
 {
     public GameObject car;
-    public int scoreValue = 1;
+    public int scoreValue = 20;
     public int addFuelCount = 15;
 
     private int randIndex;
