@@ -8,6 +8,8 @@ public class Fuel : MonoBehaviour
     public int scoreValue = 20;
     public int addFuelCount = 15;
 
+    public AudioSource fuelSound;
+
     private int randIndex;
     private List<Vector3> vectorList;
 
@@ -64,6 +66,7 @@ public class Fuel : MonoBehaviour
     {
         if(collision.gameObject == car)
         {
+            fuelSound.Play();
             Destroy(this.gameObject);
             Spawn();
             Score.Instance.IncreaseScore(scoreValue);

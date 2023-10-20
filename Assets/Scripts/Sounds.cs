@@ -12,6 +12,8 @@ public class Sounds : MonoBehaviour
     public Sprite sound_on, sound_off;
 
     public AudioSource musics;
+    public AudioSource lowFuelSound;
+    public AudioSource coinSound;
     public AudioSource fuelSound;
 
     public Slider volumeSlider;
@@ -26,6 +28,8 @@ public class Sounds : MonoBehaviour
 
         PrometeoCarController.instance.carEngineSound.volume = PlayerPrefs.GetFloat("volumeSound", 1);
         PrometeoCarController.instance.tireScreechSound.volume = PlayerPrefs.GetFloat("volumeSound", 1);
+        coinSound.volume = PlayerPrefs.GetFloat("volumeSound", 1);
+        fuelSound.volume = PlayerPrefs.GetFloat("volumeSound", 1);
         volumeSlider.value = PlayerPrefs.GetFloat("volumeSoundSlider", PrometeoCarController.instance.carEngineSound.volume);
 
         soundButton.onClick.AddListener(Sound);
@@ -40,6 +44,8 @@ public class Sounds : MonoBehaviour
     {
         PrometeoCarController.instance.carEngineSound.volume = volume;
         PrometeoCarController.instance.tireScreechSound.volume = volume;
+        coinSound.volume = volume;
+        fuelSound.volume = volume;
         PlayerPrefs.SetFloat("volumeSoundSlider", PrometeoCarController.instance.carEngineSound.volume);
         PlayerPrefs.SetFloat("volumeSound", PrometeoCarController.instance.carEngineSound.volume);
     }
@@ -49,12 +55,14 @@ public class Sounds : MonoBehaviour
         {
             PrometeoCarController.instance.carEngineSound.mute = false;
             PrometeoCarController.instance.tireScreechSound.mute = false;
+            coinSound.mute = false;
+            fuelSound.mute = false;
             if (FuelIndicator.Instance != null)
             {
                 if (FuelIndicator.Instance.CurrentFuel() <= 30)
                 {
-                    fuelSound.mute = false;
-                    fuelSound.volume = 0.3f;
+                    lowFuelSound.mute = false;
+                    lowFuelSound.volume = 0.3f;
                 }
             }
             soundButton.GetComponent<Image>().sprite = sound_on;
@@ -64,8 +72,10 @@ public class Sounds : MonoBehaviour
         {
             PrometeoCarController.instance.carEngineSound.mute = true;
             PrometeoCarController.instance.tireScreechSound.mute = true;
+            coinSound.mute = true;
             fuelSound.mute = true;
-            fuelSound.volume = 0;
+            lowFuelSound.mute = true;
+            lowFuelSound.volume = 0;
 
 
             soundButton.GetComponent<Image>().sprite = sound_off;

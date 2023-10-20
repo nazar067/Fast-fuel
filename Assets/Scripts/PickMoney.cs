@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class PickMoney : MonoBehaviour
@@ -8,6 +9,7 @@ public class PickMoney : MonoBehaviour
 
     public GameObject car;
     public int moneyValue;
+    public AudioSource moneySound;
 
     private int randIndex;
     private List<Vector3> vectorList;
@@ -71,6 +73,7 @@ public class PickMoney : MonoBehaviour
     {
         if (collision.gameObject == car)
         {
+            moneySound.Play();
             Destroy(this.gameObject);
             Spawn();
             Money.Instance.IncreaseMoney(moneyValue);
@@ -98,8 +101,11 @@ public class PickMoney : MonoBehaviour
             {
                 pickScript.enabled = true;
             }
+            AudioSource audioSource = money.GetComponent<AudioSource>();
+            if(audioSource != null)
+            {
+                audioSource.enabled = true;
+            }
         }
-
-
     }
 }

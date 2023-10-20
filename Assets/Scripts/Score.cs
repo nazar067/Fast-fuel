@@ -94,4 +94,17 @@ public class Score : MonoBehaviour
             }
         }
     }
+    public int ScoreMoney()
+    {
+        int money;
+        if (score >= 100)
+        {
+            money = Convert.ToInt32(score / 100);
+        }
+        else
+        {
+            money = 0;
+        }
+        return money;
+    }
 }

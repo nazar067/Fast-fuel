@@ -59,4 +59,10 @@ public class Money : MonoBehaviour
             moneyTextShop.text = moneyText.text;
         }
     }
+    public void PlusMoney()
+    {
+        money += FuelIndicator.Instance.plusMoney;
+        UpdateMoneyText();
+        PlayerPrefs.SetInt("Money", money);
+    }
 }

@@ -24,6 +24,7 @@ public class RestartGame : MonoBehaviour
 
     private void Restart()
     {
+        Money.Instance.PlusMoney();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

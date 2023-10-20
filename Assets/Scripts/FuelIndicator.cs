@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class FuelIndicator : MonoBehaviour
 {
+    public Text plusMoneyText;
     public GameObject loseCanvas;
     public GameObject carButtons;
     public GameObject pauseButton;
     public static FuelIndicator Instance;
+
+    public int plusMoney = 0;
 
     private float currentFuel;
     public Text fuelText;
@@ -55,6 +58,8 @@ public class FuelIndicator : MonoBehaviour
             loseCanvas.SetActive(true);
             carButtons.SetActive(false);
             pauseButton.SetActive(false);
+            plusMoney = Score.Instance.ScoreMoney();
+            plusMoneyText.text = Money.Instance.money.ToString() + " " + "+" + " " + plusMoney.ToString();
         }
         if(currentFuel > 0)
         {
